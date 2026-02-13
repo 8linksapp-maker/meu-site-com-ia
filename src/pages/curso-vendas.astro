@@ -1,0 +1,27 @@
+---
+/**
+ * curso-vendas.astro - Página de Vendas do Curso
+ * 
+ * Landing page de vendas para curso de criação de sites com IA usando o CMS CNX.
+ * Segue estrutura Dot Com Secrets do Russell Brunson com 11 seções.
+ * Acessível através de /curso-vendas
+ * Usa dados do singleton cursoVendas para todo o conteúdo editável
+ */
+
+import { readSingleton } from '../utils/singleton-utils';
+
+// Buscar tema ativo (fallback para classic)
+const activeThemeId = 'classic';
+
+// Buscar dados do curso-vendas do singleton do tema ativo
+const cursoVendasData = await readSingleton('curso-vendas', activeThemeId) || {};
+
+// Importar o template curso-vendas do tema classic
+const layoutStyle = 'classic';
+const CursoVendasTemplate = (await import(`../themes/${layoutStyle}/curso-vendas.astro`)).default;
+---
+
+<CursoVendasTemplate 
+    cursoVendasData={cursoVendasData}
+    themeId={activeThemeId}
+/>

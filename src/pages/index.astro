@@ -1,0 +1,26 @@
+---
+/**
+ * index.astro - Página Inicial (Baseada em curso-vendas)
+ * 
+ * Landing page principal.
+ * Segue estrutura Dot Com Secrets do Russell Brunson com 11 seções.
+ * Usa dados do singleton cursoVendas para todo o conteúdo editável
+ */
+
+import { readSingleton } from '../utils/singleton-utils';
+
+// Buscar tema ativo (fallback para classic)
+const activeThemeId = 'classic';
+
+// Buscar dados do curso-vendas do singleton do tema ativo
+const cursoVendasData = await readSingleton('curso-vendas', activeThemeId) || {};
+
+// Importar o template curso-vendas do tema classic
+const layoutStyle = 'classic';
+const CursoVendasTemplate = (await import(`../themes/${layoutStyle}/curso-vendas.astro`)).default;
+---
+
+<CursoVendasTemplate 
+    cursoVendasData={cursoVendasData}
+    themeId={activeThemeId}
+/>

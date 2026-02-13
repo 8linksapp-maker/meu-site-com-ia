@@ -1,0 +1,34 @@
+---
+/**
+ * Footer.astro (Classic Theme)
+ * 
+ * Componente de rodapé do tema Classic.
+ */
+
+const { activeThemeId } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-[#0a0a0a] border-t border-white/5 py-20 px-6">
+    <div class="container mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-2">
+                <div class="text-2xl font-heading font-black text-white mb-6">Curso.Vendas</div>
+                <p class="text-slate-500 max-w-sm leading-relaxed">
+                    Curso Meu Site com IA: crie site ou blog em 5 minutos com IA, sem código e sem custo de hospedagem.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Links</h4>
+                <ul class="space-y-4 text-sm text-slate-500">
+                    <li><a href="/curso-vendas" class="hover:text-primary transition-colors">Página de Vendas</a></li>
+                    <li><a href="#oferta" class="hover:text-primary transition-colors">Oferta</a></li>
+                    <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600 font-medium">
+            <p>© {year} Curso de Criação de Sites com IA. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
