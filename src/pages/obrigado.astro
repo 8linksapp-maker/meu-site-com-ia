@@ -9,7 +9,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
         <div class="container mx-auto px-4 relative z-10">
             
-            <div class="max-w-4xl mx-auto text-center mb-16">
+            <div class="max-w-4xl mx-auto text-center mb-12">
                 <!-- Success Icon -->
                 <div class="mx-auto w-24 h-24 bg-green-500/10 rounded-full flex items-center justify-center mb-8 shadow-[0_0_40px_rgba(34,197,94,0.2)]">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -22,9 +22,23 @@ import MainLayout from '../layouts/MainLayout.astro';
                     Parabéns! <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Sua vaga está garantida.</span>
                 </h1>
                 
-                <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
                     Você acaba de tomar a melhor decisão para o seu futuro digital. Todos os detalhes do seu acesso foram enviados para o seu e-mail.
                 </p>
+
+                <!-- Video Container -->
+                <div class="max-w-3xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/2yFDOCYSzj8" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen
+                    ></iframe>
+                </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto items-stretch">
@@ -58,14 +72,26 @@ import MainLayout from '../layouts/MainLayout.astro';
                         </div>
                     </div>
                     
-                    <div class="mt-8 pt-6 border-t border-slate-800">
-                        <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-3">Área de Membros</p>
-                        <a href="https://seoflix.vercel.app/" target="_blank" class="flex items-center gap-3 text-white hover:text-primary transition-colors group font-mono text-sm bg-slate-800/50 p-4 rounded-xl hover:bg-slate-800 w-full justify-between">
-                            <span class="truncate">https://seoflix.vercel.app/</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-500 group-hover:text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </a>
+                    <div class="mt-8 pt-6 border-t border-slate-800 space-y-6">
+                        <div>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-3">Área de Membros (Curso)</p>
+                            <a href="https://seoflix.vercel.app/" target="_blank" class="flex items-center gap-3 text-white hover:text-primary transition-colors group font-mono text-sm bg-slate-800/50 p-4 rounded-xl hover:bg-slate-800 w-full justify-between">
+                                <span class="truncate">https://seoflix.vercel.app/</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-500 group-hover:text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-3">Plataforma (Criação de Sites)</p>
+                            <a href="https://meu-site-com-ia-2-0.vercel.app/" target="_blank" class="flex items-center gap-3 text-white hover:text-primary transition-colors group font-mono text-sm bg-primary/10 p-4 rounded-xl hover:bg-primary/20 w-full justify-between border border-primary/20">
+                                <span class="font-bold">MEU SITE COM IA APP</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary group-hover:text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -97,7 +123,35 @@ import MainLayout from '../layouts/MainLayout.astro';
                                 <span class="block text-xl font-extrabold">Entrar no Grupo WhatsApp</span>
                             </div>
                         </a>
-                        <p class="text-xs text-slate-500 mt-4 text-center w-full">Acesso imediato para alunos</p>
+                <p class="text-xs text-slate-500 mt-4 text-center w-full">Acesso imediato para alunos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Notices -->
+            <div class="max-w-5xl mx-auto mt-10">
+                <div class="bg-amber-500/5 border border-amber-500/20 rounded-3xl p-6 md:p-8 backdrop-blur-sm relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center gap-6 text-center md:text-left relative z-10">
+                        <div class="bg-amber-500/20 p-4 rounded-2xl text-amber-400">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-amber-500 font-bold text-lg mb-1 uppercase tracking-wider">Aviso importante para encontrar seu acesso</h4>
+                            <p class="text-slate-300 text-base leading-relaxed">
+                                Caso não encontre seu e-mail de acesso, procure na sua caixa de entrada, spam ou promoções por: <br class="hidden md:block" />
+                                <span class="text-white font-bold bg-white/5 px-2 py-0.5 rounded-lg border border-white/10 mx-1 inline-block mt-2">Supabase Auth</span> 
+                                <span class="text-white font-bold bg-white/5 px-2 py-0.5 rounded-lg border border-white/10 mx-1 inline-block mt-2">SEOFLIX</span> 
+                                <span class="text-white font-bold bg-white/5 px-2 py-0.5 rounded-lg border border-white/10 mx-1 inline-block mt-2">MEU SITE COM IA</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
